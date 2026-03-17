@@ -16,7 +16,7 @@ The goal is simple: give organizations confidence that the code they deploy is t
 
 ## Technical Background
 
-**Languages:** Go (primary), Java, Python, JavaScript/TypeScript
+**Languages:** Go, Java (primary), Python, JavaScript/TypeScript
 
 **Infrastructure:** Kubernetes, Argo Workflows, Kafka, PostgreSQL, distributed systems
 

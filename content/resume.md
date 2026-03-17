@@ -9,9 +9,9 @@ description: "Sam Dacanay - Staff Software Engineer"
 
 ## Sam Dacanay
 
-Staff Software Engineer | San Diego, CA
+Staff Software Engineer
 
-[GitHub](https://github.com/dakaneye) | [LinkedIn](https://linkedin.com/in/PLACEHOLDER) | [Email](mailto:PLACEHOLDER@email.com)
+[GitHub](https://github.com/dakaneye) | [LinkedIn](https://www.linkedin.com/in/sam-dacanay)
 
 ---
 
@@ -59,7 +59,7 @@ Staff Software Engineer with 11 years of experience building distributed systems
 
 ## Technical Skills
 
-**Languages:** Go, Java, Python, JavaScript/TypeScript
+**Languages:** Go, Java (primary), Python, JavaScript/TypeScript
 
 **Infrastructure:** Kubernetes, Argo Workflows, Kafka, PostgreSQL, Docker
 

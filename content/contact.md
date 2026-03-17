@@ -7,9 +7,7 @@ description: "Get in touch with Sam Dacanay"
 
 **GitHub:** [dakaneye](https://github.com/dakaneye)
 
-**LinkedIn:** [PLACEHOLDER](https://linkedin.com/in/PLACEHOLDER)
-
-**Email:** [PLACEHOLDER@email.com](mailto:PLACEHOLDER@email.com)
+**LinkedIn:** [sam-dacanay](https://www.linkedin.com/in/sam-dacanay)
 
 ---
 
