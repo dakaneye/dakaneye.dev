@@ -2,24 +2,16 @@
 title: "About"
 ---
 
-I build systems that verify software supply chains. At Chainguard, I work on ecosystem rebuilders, tools that independently rebuild open source packages to verify they match published artifacts. When you run `chainctl libraries verify`, my code checks that the package you downloaded is what the maintainer intended to publish.
+I build systems that verify software supply chains. At Chainguard, I work on the JavaScript and Java ecosystem rebuilders, delivering SLSA 3 provenance and SBOMs for 500k+ artifacts across 44+ enterprise customers. I built LibCheck (now `chainctl libraries verify`), a Go CLI for validating package provenance.
 
-Before supply chain security, I spent a decade building infrastructure at scale. At MixMode, I designed data pipelines processing network telemetry at 100Gbps for AI-based threat detection. At Anchore, I built the Kubernetes inventory system that tracks container contents across enterprise deployments. At LogicMonitor, I led teams building metrics pipelines handling millions of data points per day.
-
-Most of my work involves Go, Kubernetes, and distributed systems. I write code that runs in production environments where reliability matters more than novelty. The interesting problems are usually in the details: making builds reproducible, handling partial failures gracefully, keeping systems observable without drowning in data.
-
-## Current Work
-
-At Chainguard, I focus on the Java and JavaScript ecosystems. These are the hardest to verify because they have complex build systems, transitive dependencies, and packaging formats that weren't designed with security in mind. Building reproducible versions of npm packages or Maven artifacts requires understanding the entire toolchain from source to published artifact.
-
-The goal is simple: give organizations confidence that the code they deploy is the code they audited. The implementation is not.
+Before Chainguard, I spent a decade building infrastructure at scale. At MixMode, I designed a horizontally scalable network data ingestion pipeline handling 100 Gbps, and led the work that landed a $20M government defense contract. At Anchore, I built the Kubernetes-based inventory system in Go and Python that reduced container analysis time by 60%. At LogicMonitor, I architected a distributed data pipeline with Kafka and Quarkus managing 2M+ monitoring metrics daily.
 
 ## Technical Background
 
-**Languages:** Go, Java (primary), Python, JavaScript/TypeScript
+**Languages:** Java, Python, SQL (expert); Go, Node.js (moderate)
 
-**Infrastructure:** Kubernetes, Argo Workflows, Kafka, PostgreSQL, distributed systems
+**Infrastructure:** AWS, GCP, Kubernetes, Helm, Argo Workflows, Kafka, PostgreSQL
 
-**Domain expertise:** Container security, supply chain verification, SLSA provenance, SBOMs, reproducible builds
+**Domains:** Distributed systems, supply chain security, SLSA provenance, SBOMs, container security
 
-I write about some of this in the [writing](/writing/) section.
+I've written about some of this work in the [writing](/writing/) section.
