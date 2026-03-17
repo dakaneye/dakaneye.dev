@@ -1,0 +1,101 @@
+/* Custom styles for dakaneye.dev */
+
+/* Root variables - minimal adjustments to PaperMod defaults */
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 4px;
+
+  /* Accent color - subtle blue-gray */
+  --accent: #4a5568;
+}
+
+/* Typography refinements */
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings - slightly tighter */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.01em;
+}
+
+/* Links - subtle underline on hover */
+.post-content a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.post-content a:hover {
+  border-bottom-color: var(--primary);
+}
+
+/* Code blocks - better contrast */
+.post-content pre {
+  border-radius: var(--radius);
+}
+
+/* Tables - cleaner look */
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+.post-content th,
+.post-content td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-content th {
+  font-weight: 600;
+}
+
+/* Home page info - cleaner spacing */
+.first-entry .entry-content {
+  line-height: 1.7;
+}
+
+/* Navigation - tighter */
+.nav {
+  gap: 20px;
+}
+
+/* Footer - minimal */
+.footer {
+  padding: 20px 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  :root {
+    --gap: 16px;
+  }
+
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .footer,
+  .toc {
+    display: none;
+  }
+
+  .post-content {
+    max-width: 100%;
+  }
+}

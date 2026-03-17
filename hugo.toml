@@ -1,3 +1,124 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://dakaneye.dev/'
+languageCode = 'en-us'
+title = 'Sam Dacanay'
+theme = 'PaperMod'
+
+# Build settings
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = false
+
+# Pagination
+paginate = 10
+
+# Minification
+[minify]
+  disableXML = true
+
+# Permalinks
+[permalinks]
+  posts = '/:year/:month/:slug/'
+
+# Output formats
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+# Sitemap
+[sitemap]
+  changefreq = 'monthly'
+  priority = 0.5
+
+# Menu
+[menu]
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'experience'
+    name = 'Experience'
+    url = '/experience/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'writing'
+    name = 'Writing'
+    url = '/writing/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'resume'
+    name = 'Resume'
+    url = '/resume/'
+    weight = 40
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    url = '/contact/'
+    weight = 50
+
+# PaperMod theme settings
+[params]
+  env = 'production'
+  title = 'Sam Dacanay'
+  description = 'Staff Software Engineer. Distributed systems, Kubernetes, supply chain security.'
+  author = 'Sam Dacanay'
+
+  # SEO
+  keywords = ['software engineer', 'distributed systems', 'kubernetes', 'supply chain security', 'go', 'java']
+
+  # Theme settings
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+  showReadingTime = true
+  showShareButtons = false
+  showPostNavLinks = true
+  showBreadCrumbs = true
+  showCodeCopyButtons = true
+  disableSpecial1stPost = true
+  hidemeta = false
+  hideSummary = false
+
+  # Home page
+  [params.homeInfoParams]
+    Title = 'Sam Dacanay'
+    Content = '''
+Staff Software Engineer at Chainguard. I build systems that verify software supply chains.
+
+Previously: Director of Engineering at MixMode, Senior Software Engineer at Anchore, Lead Engineer at LogicMonitor.
+
+11 years building distributed systems, Kubernetes controllers, and security infrastructure.
+'''
+
+  # Social icons
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/dakaneye'
+  [[params.socialIcons]]
+    name = 'linkedin'
+    url = 'https://linkedin.com/in/PLACEHOLDER'
+  [[params.socialIcons]]
+    name = 'rss'
+    url = '/index.xml'
+
+  # Assets
+  [params.assets]
+    favicon = '/favicon.ico'
+    disableFingerprinting = true
+
+  # Cover image defaults
+  [params.cover]
+    hidden = true
+    hiddenInList = true
+    hiddenInSingle = true
+
+# Markup settings
+[markup]
+  [markup.highlight]
+    style = 'github'
+    lineNos = false
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

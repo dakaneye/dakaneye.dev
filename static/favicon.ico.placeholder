@@ -1,0 +1,9 @@
+PLACEHOLDER: Add favicon.ico
+
+To add a favicon:
+1. Create a 32x32 or 16x16 pixel favicon
+2. Name it favicon.ico
+3. Place it in the static/ directory
+4. Delete this placeholder file
+
+Online tools like favicon.io can generate favicons from text or images.
