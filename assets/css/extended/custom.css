@@ -1,7 +1,18 @@
-/* Custom styles for dakaneye.dev */
+/* ==========================================================================
+   Design System: dakaneye.dev
+   Style: Swiss Modernism 2.0 + Technical Monochrome
+   Typography: Space Mono
+   ========================================================================== */
 
-/* Root variables - minimal adjustments to PaperMod defaults */
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
 :root {
+  /* Layout */
   --gap: 24px;
   --content-gap: 20px;
   --nav-width: 1024px;
@@ -10,43 +21,162 @@
   --footer-height: 60px;
   --radius: 4px;
 
-  /* Accent color - subtle blue-gray */
-  --accent: #4a5568;
+  /* Colors - Light Mode */
+  --primary: #18181B;
+  --secondary: #3F3F46;
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --border: #E4E4E7;
+  --code-bg: #F4F4F5;
+
+  /* Typography */
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
 }
 
-/* Typography refinements */
+.dark {
+  --accent: #3B82F6;
+  --accent-hover: #60A5FA;
+  --border: #27272A;
+  --code-bg: #27272A;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
 body {
-  font-feature-settings: "kern" 1, "liga" 1;
+  font-family: var(--font-mono);
+  font-feature-settings: "kern" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
 }
 
-/* Headings - slightly tighter */
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -0.01em;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-/* Links - subtle underline on hover */
-.post-content a {
+h1 { font-size: 2rem; line-height: 1.2; }
+h2 { font-size: 1.5rem; line-height: 1.3; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; line-height: 1.4; letter-spacing: 0; }
+
+/* Code inherits monospace naturally */
+code, pre, .highlight {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Links & Interactive Elements
+   ========================================================================== */
+
+a {
+  color: var(--accent);
   text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Post content links - underline on hover */
+.post-content a {
   border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
 }
 
 .post-content a:hover {
-  border-bottom-color: var(--primary);
+  border-bottom-color: var(--accent);
 }
 
-/* Code blocks - better contrast */
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.nav {
+  gap: 24px;
+}
+
+.nav a {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* Logo/site title */
+.logo a {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+
+.first-entry .entry-content,
+.home-info .home-info-content {
+  line-height: 1.7;
+}
+
+/* Profile section styling */
+.profile .profile-title {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Social icons */
+.social-icons a {
+  transition: opacity var(--transition-fast);
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   Post Content
+   ========================================================================== */
+
+.post-content {
+  line-height: 1.7;
+}
+
+/* Code blocks */
 .post-content pre {
   border-radius: var(--radius);
+  border: 1px solid var(--border);
 }
 
-/* Tables - cleaner look */
+.post-content code:not(pre code) {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Tables */
 .post-content table {
   border-collapse: collapse;
   width: 100%;
   margin: 1.5em 0;
+  font-size: 0.9rem;
 }
 
 .post-content th,
@@ -57,29 +187,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-content th {
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Home page info - cleaner spacing */
-.first-entry .entry-content {
-  line-height: 1.7;
+/* Blockquotes */
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--secondary);
 }
 
-/* Navigation - tighter */
-.nav {
-  gap: 20px;
-}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
-/* Footer - minimal */
 .footer {
-  padding: 20px 0;
+  padding: 24px 0;
+  font-size: 0.875rem;
 }
 
-/* Mobile adjustments */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
 @media (max-width: 768px) {
   :root {
     --gap: 16px;
   }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
 
   .post-content table {
     display: block;
@@ -87,7 +225,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Print styles */
+/* ==========================================================================
+   Motion & Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Print
+   ========================================================================== */
+
 @media print {
   .header,
   .footer,
@@ -97,5 +252,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .post-content {
     max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
   }
 }
