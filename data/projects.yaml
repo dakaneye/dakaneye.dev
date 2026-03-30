@@ -1,0 +1,66 @@
+featured:
+  - name: claude-sandbox
+    repo: https://github.com/dakaneye/claude-sandbox
+    language: Go
+    description: >-
+      autonomous Claude execution environment. runs implementations in
+      sandboxed Docker containers with git worktree isolation, quality gates,
+      and automatic PR creation. give it a task, let it work in a safe box,
+      get a PR back.
+
+  - name: kora
+    repo: https://github.com/dakaneye/kora
+    language: Go
+    description: >-
+      CLI that aggregates work activity from GitHub, Gmail, Calendar, and
+      Linear into structured JSON. designed as a data layer for AI powered
+      workflows — morning briefs, weekly digests, status reports. the boring
+      plumbing that makes the interesting stuff possible.
+
+  - name: word-clock
+    repo: https://github.com/dakaneye/word-clock
+    language: C++
+    description: >-
+      Arduino powered clock that displays time in English words on a laser cut
+      panel. has a birthday mode. the kind of project that starts as "this
+      will take a weekend" and doesn't.
+
+  - name: copilot-overlay
+    repo: https://github.com/dakaneye/copilot-overlay
+    language: TypeScript
+    description: >-
+      Chrome extension that shows your Copilot Money budget on shopping and
+      food delivery checkout pages. uses native host messaging and macOS
+      Keychain for credentials. built because i kept overspending on DoorDash.
+
+  - name: copilot-money-mcp
+    repo: https://github.com/dakaneye/copilot-money-mcp
+    language: TypeScript
+    description: >-
+      MCP server for the Copilot Money API. transaction management,
+      categorization, tagging, budgeting — all accessible to AI assistants.
+      companion to copilot-overlay.
+
+  - name: claude-review-code
+    repo: https://github.com/dakaneye/claude-review-code
+    language: Python
+    description: >-
+      code review skill for Claude Code with 12 specialized subagents.
+      language specific checklists for Go, Node, Java, Python, Bash, and
+      Terraform. includes AI generated code detection patterns.
+
+contributions:
+  - name: anchore/kai
+    repo: https://github.com/anchore/k8s-inventory
+    language: Go
+    description: "built the Kubernetes inventory agent (now k8s-inventory)"
+
+  - name: anchore/grype
+    repo: https://github.com/anchore/grype
+    language: Go
+    description: vulnerability scanner contributions
+
+  - name: anchore/syft
+    repo: https://github.com/anchore/syft
+    language: Go
+    description: SBOM generation tool contributions
