@@ -208,6 +208,102 @@ input:focus-visible {
 }
 
 /* ==========================================================================
+   Section Labels & Page Intro
+   ========================================================================== */
+
+.section-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  opacity: 0.6;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.page-intro {
+  color: var(--secondary);
+  margin-bottom: 2em;
+}
+
+/* ==========================================================================
+   Project Cards
+   ========================================================================== */
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-card-header a {
+  font-weight: 700;
+}
+
+.project-card-lang {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  opacity: 0.5;
+}
+
+.project-card-description {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+
+/* ==========================================================================
+   Contribution Rows
+   ========================================================================== */
+
+.contributions {
+  margin-top: 0.75em;
+}
+
+.contribution-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.contribution-row:last-child {
+  border-bottom: none;
+}
+
+.contribution-row a {
+  font-weight: 700;
+}
+
+.contribution-row-desc {
+  color: var(--secondary);
+}
+
+.contribution-row-lang {
+  font-size: 0.75rem;
+  color: var(--secondary);
+  opacity: 0.5;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 
@@ -222,6 +318,15 @@ input:focus-visible {
   .post-content table {
     display: block;
     overflow-x: auto;
+  }
+
+  .contribution-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .contribution-row-lang {
+    margin-left: 0;
   }
 }
 
