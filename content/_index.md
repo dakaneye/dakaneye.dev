@@ -2,16 +2,20 @@
 title: "About"
 ---
 
-I build systems that verify software supply chains. At Chainguard, I work on the JavaScript and Java ecosystem rebuilders, delivering SLSA 3 provenance and SBOMs for 500k+ artifacts across 44+ enterprise customers. I built LibCheck (now `chainctl libraries verify`), a Go CLI for validating package provenance.
+right now i'm at Chainguard, working on supply chain security. i rebuild open source packages from source with SLSA 3 provenance so enterprises can actually trust what they ship. that means building the JavaScript and Java ecosystem rebuilders — 500k+ artifacts across 44+ enterprise customers.
 
-Before Chainguard, I spent a decade building infrastructure at scale. At MixMode, I designed a horizontally scalable network data ingestion pipeline handling 100 Gbps, and led the work that landed a $20M government defense contract. At Anchore, I built the Kubernetes-based inventory system in Go and Python that reduced container analysis time by 60%. At LogicMonitor, I architected a distributed data pipeline with Kafka and Quarkus managing 2M+ monitoring metrics daily.
+before that, a decade of distributed systems. i designed a 100 Gbps network data ingestion pipeline at MixMode. built the Kubernetes inventory system at Anchore that cut container analysis time by 60%. architected a Kafka and Quarkus data pipeline at LogicMonitor pushing 2M+ monitoring metrics daily.
 
-## Technical Background
+i care most about the work between the work — the tooling, the automation, the systems that make other systems reliable. if something can be verified, it should be. if something can be automated, it probably should be too.
 
-**Languages:** Java, Python, SQL (expert); Go, Node.js (moderate)
+<h2 class="section-label">how i work</h2>
 
-**Infrastructure:** AWS, GCP, Kubernetes, Helm, Argo Workflows, Kafka, PostgreSQL
+**data over instinct.** i make spreadsheets before i make decisions. gut feel gets a vote, not a veto.
 
-**Domains:** Distributed systems, supply chain security, SLSA provenance, SBOMs, container security
+**build the thing that builds the thing.** the best leverage is in tooling and infrastructure that multiplies what a team can do.
 
-I've written about some of this work in the [writing](/writing/) section.
+**simple until proven otherwise.** the right amount of complexity is what the problem actually requires.
+
+<h2 class="section-label">background</h2>
+
+Java, Python, Go · AWS, GCP, Kubernetes · distributed systems, supply chain security

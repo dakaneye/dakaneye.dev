@@ -84,11 +84,7 @@ paginate = 10
   [params.homeInfoParams]
     Title = 'Sam Dacanay'
     Content = '''
-Staff Software Engineer at Chainguard. I build systems that verify software supply chains.
-
-Previously: Director of Engineering at MixMode, Senior Software Engineer at Anchore, Lead Engineer at LogicMonitor.
-
-11 years building distributed systems, Kubernetes controllers, and security infrastructure.
+staff software engineer. i build infrastructure and make sure software is what it says it is.
 '''
 
   # Social icons
