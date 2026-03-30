@@ -1,0 +1,29 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+
+    <div class="project-cards">
+      {{- range .Site.Data.projects.featured }}
+      {{ partial "project-card.html" . }}
+      {{- end }}
+    </div>
+
+    <h2 class="section-label">contributions</h2>
+    <p class="page-intro" style="margin-bottom: 0.75em;">earlier work on open source security tooling at Anchore</p>
+
+    <div class="contributions">
+      {{- range .Site.Data.projects.contributions }}
+      {{ partial "contribution-row.html" . }}
+      {{- end }}
+    </div>
+  </div>
+</article>
+
+{{- end }}
