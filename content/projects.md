@@ -5,4 +5,4 @@ description: "Open source projects and contributions"
 hideMeta: true
 ---
 
-things i've built. some useful, some just fun.
+Things I've built. Some useful, some just fun.
