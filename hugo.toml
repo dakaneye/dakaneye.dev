@@ -38,6 +38,11 @@ paginate = 10
     url = '/'
     weight = 10
   [[menu.main]]
+    identifier = 'projects'
+    name = 'Projects'
+    url = '/projects/'
+    weight = 20
+  [[menu.main]]
     identifier = 'writing'
     name = 'Writing'
     url = '/writing/'
