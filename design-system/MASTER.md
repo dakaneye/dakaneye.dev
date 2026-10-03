@@ -37,7 +37,7 @@ All text colors meet 4.5:1 contrast on `--bg`.
 ## Layout
 
 - Max width 1240px. Sidebar `flex: 1 1 220px`; main `flex: 999 1 640px`.
-- Below 900px the sidebar stacks above the content and its links wrap in a row.
+- Below 860px the sidebar stacks above the content and its links wrap in a row.
 - Sections are 112px apart. Text blocks cap at 660–720px.
 
 ## Patterns

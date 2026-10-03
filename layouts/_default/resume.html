@@ -48,10 +48,17 @@
       <p><span class="strong">{{ .school }}</span><br><span class="soft">{{ .degree }}</span></p>
     </section>
     {{- end }}
+    {{- if or $resume.awards $resume.languages }}
     <section aria-labelledby="awards">
       <h2 id="awards" class="label">Awards and languages</h2>
-      <p>{{ delimit $resume.awards "<br>" | safeHTML }}<br><span class="soft">{{ $resume.languages }}</span></p>
+      <ul class="plain-list">
+        {{- range $resume.awards }}
+        <li>{{ . }}</li>
+        {{- end }}
+        {{- with $resume.languages }}<li class="soft">{{ . }}</li>{{ end }}
+      </ul>
     </section>
+    {{- end }}
   </aside>
 </div>
 {{ end }}

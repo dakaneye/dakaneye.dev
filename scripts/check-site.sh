@@ -47,9 +47,11 @@ assert_contains writing/index.html 'ls writing/'
 assert_contains writing/index.html 'Quarkus vs. Spring Boot'
 assert_contains writing/quarkus-vs-spring/index.html 'class=prose'
 assert_contains index.xml 'Quarkus vs. Spring Boot'
+assert_contains index.xml '<title>Sam Dacanay</title>'
 assert_contains 404.html 'cd ~'
 
-# Resume and contact redirect; no personal contact details anywhere
+# Resume and contact redirect; no street address or phone number in built HTML.
+# static/resume.pdf is compressed, so these greps cannot see inside it.
 for text in 'cat resume.md' 'Download PDF' 'Keycloak'; do
   assert_contains resume/index.html "$text"
 done

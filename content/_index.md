@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Sam Dacanay"
 heading: "I build software that leaves the building."
 aliases: ["/contact/"]
 ---
