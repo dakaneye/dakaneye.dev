@@ -1,0 +1,18 @@
+<aside class="sidebar">
+  <a class="sidebar-name" href="{{ "/" | relURL }}">{{ lower site.Params.author }}</a>
+  <p class="sidebar-role">{{ site.Params.role }}</p>
+  <nav class="sidebar-nav" aria-label="Main">
+    <ul>
+      {{- $current := . }}
+      {{- range site.Menus.main }}
+      {{- $active := or (eq $current.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $current.RelPermalink .URL)) }}
+      <li><a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+  <ul class="sidebar-social">
+    {{- range site.Params.social }}
+    <li><a href="{{ .url | relURL }}">{{ .name }}{{ if hasPrefix .url "http" }} ↗{{ end }}</a></li>
+    {{- end }}
+  </ul>
+</aside>

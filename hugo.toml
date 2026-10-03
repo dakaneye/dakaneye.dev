@@ -1,7 +1,6 @@
 baseURL = 'https://dakaneye.dev/'
 languageCode = 'en-us'
 title = 'Sam Dacanay'
-theme = 'PaperMod'
 
 # Build settings
 enableRobotsTXT = true
@@ -9,21 +8,15 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 enableEmoji = false
-
-# Pagination
-paginate = 10
+disableKinds = ['taxonomy', 'term']
 
 # Minification
 [minify]
   disableXML = true
 
-# Permalinks
-[permalinks]
-  posts = '/:year/:month/:slug/'
-
 # Output formats
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML', 'RSS']
 
 # Sitemap
 [sitemap]
@@ -34,87 +27,44 @@ paginate = 10
 [menu]
   [[menu.main]]
     identifier = 'about'
-    name = 'About'
+    name = 'about'
     url = '/'
     weight = 10
   [[menu.main]]
     identifier = 'projects'
-    name = 'Projects'
+    name = 'projects'
     url = '/projects/'
     weight = 20
   [[menu.main]]
     identifier = 'writing'
-    name = 'Writing'
+    name = 'writing'
     url = '/writing/'
     weight = 30
   [[menu.main]]
     identifier = 'resume'
-    name = 'Resume'
+    name = 'resume'
     url = '/resume/'
     weight = 40
-  [[menu.main]]
-    identifier = 'contact'
-    name = 'Contact'
-    url = '/contact/'
-    weight = 50
 
-# PaperMod theme settings
 [params]
-  env = 'production'
-  title = 'Sam Dacanay'
   description = 'Staff Software Engineer, Tech Lead for on-prem delivery. Distributed systems, Kubernetes, supply chain security.'
   author = 'Sam Dacanay'
-
-  # SEO
+  role = 'staff swe · tech lead'
   keywords = ['software engineer', 'distributed systems', 'kubernetes', 'supply chain security', 'on-prem', 'go', 'java']
 
-  # Theme settings
-  defaultTheme = 'auto'
-  disableThemeToggle = false
-  showReadingTime = true
-  showShareButtons = false
-  showPostNavLinks = true
-  showBreadCrumbs = true
-  showCodeCopyButtons = true
-  disableSpecial1stPost = true
-  hidemeta = false
-  hideSummary = false
-
-  # Home page
-  [params.homeInfoParams]
-    Title = 'Sam Dacanay'
-    Content = '''
-Staff software engineer and tech lead for on-prem delivery. I build infrastructure and make sure software is what it says it is.
-'''
-
-  # Social icons
-  [[params.socialIcons]]
+  [[params.social]]
     name = 'github'
     url = 'https://github.com/dakaneye'
-  [[params.socialIcons]]
+  [[params.social]]
     name = 'linkedin'
     url = 'https://www.linkedin.com/in/sam-dacanay'
-  [[params.socialIcons]]
+  [[params.social]]
     name = 'rss'
     url = '/index.xml'
-
-  # Assets
-  [params.assets]
-    favicon = '/favicon.ico'
-    disableFingerprinting = true
-
-  # Cover image defaults
-  [params.cover]
-    hidden = true
-    hiddenInList = true
-    hiddenInSingle = true
 
 # Markup settings
 [markup]
   [markup.highlight]
-    style = 'github'
+    style = 'github-dark'
     lineNos = false
-    noClasses = false
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+    noClasses = true
