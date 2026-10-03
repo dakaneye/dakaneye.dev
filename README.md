@@ -1,15 +1,15 @@
 # dakaneye.dev
 
-Personal website for Sam Dacanay. Built with Hugo and the PaperMod theme.
+Personal website for Sam Dacanay. Built with Hugo and hand-written layouts; no theme.
 
 ## Local Development
 
 ```bash
-# Install Hugo (macOS)
+# Install Hugo extended 0.158.0 (macOS)
 brew install hugo
 
 # Run local server
-hugo server -D
+hugo server
 
 # Build for production
 hugo --minify
@@ -17,38 +17,40 @@ hugo --minify
 
 The site will be available at http://localhost:1313
 
+## Site Checks
+
+```bash
+scripts/check-site.sh
+```
+
+The script builds the site with `--panicOnWarning`, so any Hugo warning fails it.
+It then checks that each page renders its key content, that `/contact/` redirects,
+and that no street address or phone number appears in the output. Set `HUGO` to
+use a specific Hugo binary.
+
 ## Project Structure
 
 ```
 content/
-├── _index.md              # About/landing page
-├── experience/
-│   └── _index.md          # Career case studies
-├── writing/
-│   ├── _index.md          # Blog listing
-│   └── verifying-supply-chains.md
-├── resume.md
-└── contact.md
+├── _index.md              # Home: headline and intro paragraph
+├── projects.md
+├── resume.md              # Uses the resume layout
+└── writing/               # Posts
 
-static/
-├── resume.pdf             # (placeholder - add actual PDF)
-└── favicon.ico            # (placeholder - add actual favicon)
+data/
+├── about.yaml             # Home sections: stats, shipped, leadership, AI, principles
+├── projects.yaml          # Featured projects and contributions
+└── resume.yaml            # Jobs, skills, education; shared by home and resume
 
-assets/css/extended/
-└── custom.css             # Theme customizations
+layouts/
+├── _default/              # baseof, list, single, projects, resume
+├── partials/              # head, sidebar, prompt, project cards
+├── index.html             # Home
+└── 404.html
+
+assets/css/main.css        # All styles; tokens in design-system/MASTER.md
+static/resume.pdf          # Downloadable resume
 ```
-
-## Placeholders to Replace
-
-Before deploying, replace these placeholders:
-
-1. **Resume PDF**: Add `static/resume.pdf` and delete `static/resume.pdf.placeholder`
-2. **Favicon**: Add `static/favicon.ico` and delete `static/favicon.ico.placeholder`
-3. **LinkedIn URL**: Search for "PLACEHOLDER" in:
-   - `hugo.toml`
-   - `content/resume.md`
-   - `content/contact.md`
-4. **Email**: Update email in `content/resume.md` and `content/contact.md`
 
 ## Cloudflare Pages Deployment
 
@@ -76,12 +78,3 @@ hugo new writing/your-post-title.md
 ```
 
 Edit the generated file in `content/writing/`. Remove `draft: true` when ready to publish.
-
-## Theme
-
-Using [PaperMod](https://github.com/adityatelange/hugo-PaperMod) as a git submodule.
-
-To update the theme:
-```bash
-git submodule update --remote themes/PaperMod
-```

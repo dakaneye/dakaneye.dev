@@ -1,87 +1,54 @@
 # Design System: dakaneye.dev
 
-**Style:** Swiss Modernism 2.0 + Technical Monochrome
-**Generated:** 2026-03-22 via UI UX Pro Max
+**Style:** Quiet terminal. Dark graphite, one monospace family, amber accent,
+section headers written as shell prompts.
 
-## Design Tokens
+## Colors
 
-### Colors
+Dark only. `color-scheme: dark`.
 
 ```css
-/* Light Mode */
---primary: #18181B;      /* Zinc 900 - Primary text */
---secondary: #3F3F46;    /* Zinc 700 - Secondary text */
---muted: #71717A;        /* Zinc 500 - Muted text */
---accent: #2563EB;       /* Blue 600 - Links, CTAs */
---accent-hover: #1D4ED8; /* Blue 700 - Hover state */
---background: #FAFAFA;   /* Zinc 50 - Page background */
---surface: #FFFFFF;      /* White - Card/elevated surfaces */
---border: #E4E4E7;       /* Zinc 200 - Borders */
-
-/* Dark Mode */
---primary-dark: #FAFAFA;
---secondary-dark: #A1A1AA;
---muted-dark: #71717A;
---accent-dark: #3B82F6;
---accent-hover-dark: #60A5FA;
---background-dark: #09090B;
---surface-dark: #18181B;
---border-dark: #27272A;
+--bg: #141312;           /* Page background */
+--surface: #1b1a18;      /* Cards, code blocks, blockquotes */
+--line: #2a2826;         /* Rules and borders */
+--ink: #e7e3dc;          /* Body text */
+--ink-strong: #f6f3ee;   /* Headings */
+--muted: #96918a;        /* Labels, secondary text */
+--soft: #b9b4ac;         /* Paragraph text under headings */
+--accent: #f2b256;       /* Prompts, dates, links, stats */
+--accent-hover: #ffd08a; /* Link hover */
 ```
 
-### Typography
+All text colors meet 4.5:1 contrast on `--bg`.
 
-**Font Stack:** Space Mono (monospace)
-- Mood: Technical, precise, developer-focused
-- Import: `https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap`
+## Typography
 
-| Element | Size | Weight | Line Height | Letter Spacing |
-|---------|------|--------|-------------|----------------|
-| H1 | 2rem (32px) | 700 | 1.2 | -0.02em |
-| H2 | 1.5rem (24px) | 700 | 1.3 | -0.01em |
-| H3 | 1.25rem (20px) | 700 | 1.4 | 0 |
-| Body | 1rem (16px) | 400 | 1.7 | 0 |
-| Small | 0.875rem (14px) | 400 | 1.5 | 0 |
-| Code | 0.9rem | 400 | 1.6 | 0 |
+**Font:** JetBrains Mono 400, 500, 700, 800 from Google Fonts.
 
-### Spacing
+| Element | Size | Weight |
+|---------|------|--------|
+| Home headline | clamp(36px, 5.4vw, 64px) | 800 |
+| Page title | clamp(32px, 4.4vw, 48px) | 800 |
+| Section title | 22px | 700 |
+| Body | 16px, line height 1.75 | 400 |
+| Prompt, list text | 15px | 400 |
+| Labels, tags | 13px | 400–500 |
 
-Based on 4px grid:
-- `--space-1`: 4px
-- `--space-2`: 8px
-- `--space-3`: 12px
-- `--space-4`: 16px
-- `--space-6`: 24px
-- `--space-8`: 32px
-- `--space-12`: 48px
-- `--space-16`: 64px
+## Layout
 
-### Effects
+- Max width 1240px. Sidebar `flex: 1 1 220px`; main `flex: 999 1 640px`.
+- Below 900px the sidebar stacks above the content and its links wrap in a row.
+- Sections are 112px apart. Text blocks cap at 660–720px.
 
-| Effect | Value |
-|--------|-------|
-| Border radius | 4px (subtle) |
-| Transition | 150ms ease |
-| Focus ring | 2px solid var(--accent), 2px offset |
-| Link underline | 1px solid, appears on hover |
+## Patterns
 
-### Layout
+- **Prompt:** `partial "prompt.html" "<command>"` renders `$ <command>` above a section.
+- **Tagged list:** an accent tag column beside a text column.
+- **Career log:** accent dates beside company, role, and one-line summary.
+- **Card:** `--surface` fill, 4px radius, no border.
 
-- Max content width: 720px
-- Nav width: 1024px
-- Responsive breakpoints: 375px, 768px, 1024px
+## Rules
 
-## Anti-Patterns to Avoid
-
-- No emojis as icons (use SVG if needed)
-- No decorative animations (respect prefers-reduced-motion)
-- No color as only indicator (accessibility)
-- No text below 14px
-
-## Accessibility Checklist
-
-- [x] Contrast ratio 4.5:1 minimum (body text)
-- [x] Contrast ratio 3:1 minimum (large text, UI)
-- [x] Focus states visible
-- [x] prefers-reduced-motion respected
-- [x] Semantic HTML structure
+- No emoji. No decorative animation; `prefers-reduced-motion` respected.
+- Visible focus rings. Skip link to main content. Nav targets at least 44px tall.
+- Every number on the site comes from the current resume.
