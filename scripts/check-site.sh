@@ -42,4 +42,11 @@ for text in 'ls projects/' 'claude-sandbox' 'anchore/syft'; do
   assert_contains projects/index.html "$text"
 done
 
+# Writing, posts, RSS, 404
+assert_contains writing/index.html 'ls writing/'
+assert_contains writing/index.html 'Quarkus vs. Spring Boot'
+assert_contains writing/quarkus-vs-spring/index.html 'class=prose'
+assert_contains index.xml 'Quarkus vs. Spring Boot'
+assert_contains 404.html 'cd ~'
+
 echo "PASS: site checks"

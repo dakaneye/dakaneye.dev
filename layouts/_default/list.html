@@ -1,3 +1,20 @@
 {{ define "main" }}
-{{ .Content }}
+<section>
+  {{ partial "prompt.html" (printf "ls %s/" .Section) }}
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
+</section>
+
+<ol class="posts">
+  {{- range .Pages.ByDate.Reverse }}
+  <li class="post-item">
+    <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    <div class="post-body">
+      <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Description }}<p class="soft">{{ . }}</p>{{ end }}
+      {{- with .Params.tags }}<p class="post-tags">{{ delimit . " · " }}</p>{{ end }}
+    </div>
+  </li>
+  {{- end }}
+</ol>
 {{ end }}

@@ -435,6 +435,114 @@ a:focus-visible {
   padding: 0;
 }
 
+/* Writing */
+
+.posts {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.post-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.post-date {
+  flex: 0 0 120px;
+  padding-top: 4px;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.post-body {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.post-title a {
+  color: var(--ink-strong);
+}
+
+.post-body p {
+  margin: 8px 0 0;
+  max-width: 640px;
+  font-size: 15px;
+}
+
+.post-tags,
+.post-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.post-meta {
+  margin: 12px 0 0;
+}
+
+.prose {
+  max-width: 720px;
+  margin-top: 48px;
+}
+
+.prose h2 { margin: 48px 0 16px; font-size: 22px; }
+.prose h3 { margin: 32px 0 12px; font-size: 18px; }
+
+.prose code {
+  padding: 0.1em 0.35em;
+  background: var(--surface);
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  padding: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.prose pre code {
+  padding: 0;
+  background: none;
+}
+
+.prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.prose th,
+.prose td {
+  padding: 8px 16px 8px 0;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: var(--surface);
+  color: var(--soft);
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
