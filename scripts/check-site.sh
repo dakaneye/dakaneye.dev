@@ -31,4 +31,10 @@ assert_contains index.html 'class=sidebar'
 assert_contains index.html 'JetBrains+Mono'
 assert_absent_everywhere 'PaperMod'
 
+# Home
+for text in 'I build software that leaves the building.' 'ls shipped/' 'cat leadership.md' \
+  'cat ai.md' 'git log --career' 'cat principles.txt' 'Kind and direct.' 'NetBox Labs' '500k+'; do
+  assert_contains index.html "$text"
+done
+
 echo "PASS: site checks"

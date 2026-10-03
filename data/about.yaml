@@ -1,0 +1,72 @@
+stats:
+  - value: 12 yrs
+    label: shipping production systems
+  - value: 2 orgs
+    label: engineering teams led
+  - value: 500k+
+    label: artifacts with SLSA 3 provenance
+  - value: $20M
+    label: contract a release helped land
+
+shipped:
+  command: ls shipped/ --since=2026-05
+  title: Five months at NetBox Labs.
+  items:
+    - tag: identity
+      text: >-
+        Keycloak as the identity layer for the new platform apps. OIDC, SAML,
+        and LDAP customers on one setup.
+    - tag: routing
+      text: >-
+        Every install moved off ingress-nginx to Traefik and the Gateway API:
+        Helm chart, operator, and installer together. Customers upgraded in
+        place.
+    - tag: releases
+      text: >-
+        Required checks, branch protection, and automation that shows evidence
+        each gate passed.
+    - tag: team
+      text: >-
+        Standardized the team's Claude Code skills and pointed QA at automated
+        regression coverage.
+
+leadership:
+  title: I lead and I still write the code.
+  items:
+    - heading: Built teams
+      text: >-
+        Hired and led MixMode's senior Scala team. Grew LogicMonitor's team
+        300% in six months and halved time-to-effectiveness.
+    - heading: Raised the floor
+      text: >-
+        Release gates that show their evidence. Shared workflows the whole team
+        uses, so good habits don't depend on memory.
+    - heading: Closed the deal
+      text: >-
+        A Helm chart and release process that helped land a $20M government
+        defense contract.
+
+ai:
+  title: Fast before AI. Faster with it. Same bar.
+  intro: >-
+    I run agents in parallel, in sandboxes, behind the same review gates a
+    human PR gets. The speed is new. The standards aren't.
+  items:
+    - name: claude-sandbox
+      url: https://github.com/dakaneye/claude-sandbox
+      text: autonomous runs in Docker and git worktrees, with quality gates, ending in a PR
+    - name: claude-review-code
+      url: https://github.com/dakaneye/claude-review-code
+      text: review with 12 specialist subagents
+    - name: team skills at NetBox Labs
+      text: scoping, release readiness, on-call handoff, automated review
+
+principles:
+  - heading: Kind and direct.
+    text: I say the hard thing early, and I make it easy to say it back to me.
+  - heading: Data over instinct.
+    text: Gut feel gets a vote, not a veto.
+  - heading: Build the thing that builds the thing.
+    text: Leverage lives in tooling that multiplies what a team can do.
+  - heading: Simple until proven otherwise.
+    text: The right amount of complexity is what the problem actually requires.

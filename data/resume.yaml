@@ -1,0 +1,119 @@
+summary: >-
+  Staff Software Engineer and Director of Engineering with 12 years building
+  high-throughput distributed systems and shipping enterprise infrastructure
+  that runs inside customers' own data centers. Hires and leads backend
+  teams; leads identity, release engineering, and supply-chain security work.
+
+jobs:
+  - company: NetBox Labs
+    role: Staff Software Engineer, Tech Lead
+    short_role: Staff SWE, Tech Lead (on-prem)
+    dates: 2026–now
+    long_dates: May 2026 – present
+    summary: Identity, routing, and release gates for software customers run themselves.
+    bullets:
+      - >-
+        Chose and integrated Keycloak as the identity layer for NetBox's new
+        platform apps, wired to an in-house authorization server. Customers
+        sign in with their own company accounts, a sign-in survives losing a
+        node mid-login, and the same setup serves SAML and LDAP customers, not
+        just OIDC.
+      - >-
+        Moved every install off ingress-nginx onto Traefik and the Gateway
+        API, updating the Helm chart, the Kubernetes operator, and the
+        installer together so on-prem runs the same routing stack as the cloud
+        product. Existing customers upgraded in place.
+      - >-
+        Made releases repeatable with required checks, branch protection, and
+        automation that shows evidence each gate passed, instead of trusting
+        that someone remembered.
+      - >-
+        Standardized the team's Claude Code skills and workflows: shared
+        agents for scoping tickets, tracking release readiness, and on-call
+        handoff, plus consistent automated review across the repos the team
+        ships. Pointed QA at automated coverage and regression testing rather
+        than a test plan per ticket.
+
+  - company: Chainguard
+    role: Staff Software Engineer
+    short_role: Staff Software Engineer
+    dates: 2024–2026
+    long_dates: May 2024 – April 2026
+    summary: Java and JavaScript rebuilders. SLSA 3 provenance for 500k+ artifacts.
+    bullets:
+      - >-
+        Built and maintained the Java and JavaScript ecosystem rebuilders,
+        delivering SLSA 3 provenance and SBOMs for 500k+ artifacts across 44+
+        enterprise customers. Migrated the Java rebuilder to Argo Workflows,
+        automating 2,000+ popular libraries.
+      - >-
+        Built LibCheck, shipped as chainctl libraries verify: a Go CLI that
+        validates package provenance and compares customer images against
+        Chainguard base images.
+
+  - company: MixMode
+    role: Director of Engineering
+    short_role: Director of Engineering
+    dates: 2022–2024
+    long_dates: August 2022 – May 2024
+    summary: 100 Gb/s ingestion pipeline, and the team that built it.
+    bullets:
+      - >-
+        Designed a horizontally scalable network ingestion pipeline deployed
+        in Kubernetes to sustain 100 Gb/s, and hired and led the senior Scala
+        team that built it.
+      - >-
+        Built the Helm chart and release process for the legacy product,
+        culminating in a $20M contract with a major government defense agency.
+
+  - company: Anchore
+    role: Senior Software Engineer
+    short_role: Senior Software Engineer
+    dates: 2020–2022
+    long_dates: August 2020 – August 2022
+    summary: Kubernetes inventory that cut image analysis time 60%.
+    bullets:
+      - >-
+        Built a Kubernetes-based inventory system in Go and Python that let
+        Anchore's platform analyze thousands of deployed Docker images daily
+        and cut analysis time by 60%+, then added OSCAP report ingestion that
+        improved report processing speed by 70%.
+
+  - company: LogicMonitor
+    role: Lead Software Engineer
+    earlier_roles: Engineering Manager, Senior Software Engineer
+    short_role: Lead SWE, Eng Manager
+    dates: 2014–2020
+    long_dates: June 2014 – August 2020
+    summary: Kafka and Quarkus pipeline at 2M+ metrics a day. Grew the team 300%.
+    bullets:
+      - >-
+        Architected a high-throughput distributed data ingestion pipeline with
+        AWS EKS, Kafka, and Quarkus storing over 2 million monitoring metrics
+        daily, doubling processing efficiency while absorbing 20% growth in
+        data volume on less hardware.
+      - >-
+        Scaled the engineering team 300% in 6 months as Engineering Manager,
+        cutting time-to-effectiveness in half. Previously led distributed
+        Tomcat Java applications deployed across AWS Kubernetes clusters in 3
+        time zones, ensuring 99.99% uptime.
+
+skills:
+  - group: Cloud and containers
+    items: AWS, GCP, Docker, Kubernetes, Helm, Replicated/KOTS
+  - group: Languages
+    items: Java, Python, SQL, Go, Node.js
+  - group: Databases
+    items: PostgreSQL, MySQL, BigQuery, Elasticsearch
+  - group: DevOps and CI/CD
+    items: GitHub Actions, CircleCI, GitLab, Bamboo, Terraform
+
+education:
+  school: University of California, Santa Barbara
+  degree: B.S. Computer Science
+
+awards:
+  - Eagle Scout
+  - LogicMonitor AllStar Award
+
+languages: English and Spanish

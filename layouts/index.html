@@ -1,3 +1,86 @@
 {{ define "main" }}
-{{ .Content }}
+{{- $about := site.Data.about }}
+<section class="hero">
+  {{ partial "prompt.html" "whoami" }}
+  <h1 class="hero-title">{{ .Params.heading }}</h1>
+  <div class="hero-intro">{{ .Content }}</div>
+  <ul class="stats">
+    {{- range $about.stats }}
+    <li><span class="stat-value">{{ .value }}</span><span class="stat-label">{{ .label }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+
+{{- with $about.shipped }}
+<section class="section" aria-labelledby="shipped">
+  {{ partial "prompt.html" .command }}
+  <h2 id="shipped" class="section-title">{{ .title }}</h2>
+  <ol class="tagged-list">
+    {{- range .items }}
+    <li><span class="tag">{{ .tag }}</span><span>{{ .text }}</span></li>
+    {{- end }}
+  </ol>
+</section>
+{{- end }}
+
+{{- with $about.leadership }}
+<section class="section" aria-labelledby="leadership">
+  {{ partial "prompt.html" "cat leadership.md" }}
+  <h2 id="leadership" class="section-title">{{ .title }}</h2>
+  <div class="columns">
+    {{- range .items }}
+    <div>
+      <h3 class="column-title">{{ .heading }}</h3>
+      <p class="soft">{{ .text }}</p>
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with $about.ai }}
+<section class="section" aria-labelledby="ai">
+  {{ partial "prompt.html" "cat ai.md" }}
+  <h2 id="ai" class="section-title">{{ .title }}</h2>
+  <p class="soft measure">{{ .intro }}</p>
+  <ul class="link-list">
+    {{- range .items }}
+    <li>
+      {{- if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}<span class="strong">{{ .name }}</span>{{ end }}
+      <span class="muted">· {{ .text }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+<section class="section" aria-labelledby="career">
+  {{ partial "prompt.html" "git log --career" }}
+  <h2 id="career" class="sr-only">Career</h2>
+  <ol class="career">
+    {{- range site.Data.resume.jobs }}
+    <li>
+      <span class="career-dates">{{ .dates }}</span>
+      <div class="career-body">
+        <div><strong class="strong">{{ .company }}</strong> <span class="muted">· {{ .short_role }}</span></div>
+        {{- with .summary }}<p class="soft">{{ . }}</p>{{ end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+  <p><a href="{{ "resume/" | relURL }}">full resume →</a></p>
+</section>
+
+<section class="section" aria-labelledby="principles">
+  {{ partial "prompt.html" "cat principles.txt" }}
+  <h2 id="principles" class="sr-only">How I work</h2>
+  <dl class="principles">
+    {{- range $about.principles }}
+    <div>
+      <dt>{{ .heading }}</dt>
+      <dd>{{ .text }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+</section>
 {{ end }}
