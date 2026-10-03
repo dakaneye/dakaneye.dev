@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{- $resume := site.Data.resume }}
+<section class="resume-header">
+  <div>
+    {{ partial "prompt.html" "cat resume.md" }}
+    <h1 class="page-title">{{ site.Params.author }}</h1>
+    <p class="page-intro measure">{{ $resume.summary }}</p>
+  </div>
+  <a class="button" href="{{ "resume.pdf" | relURL }}" download>Download PDF ↓</a>
+</section>
+
+<div class="resume">
+  <section class="resume-main" aria-labelledby="experience">
+    <h2 id="experience" class="label">Experience</h2>
+    {{- range $resume.jobs }}
+    <article class="job">
+      <div class="job-header">
+        <h3 class="job-title">{{ .company }} <span class="muted">· {{ .role }}</span></h3>
+        <span class="job-dates">{{ .long_dates }}</span>
+      </div>
+      {{- with .earlier_roles }}<p class="job-earlier">earlier: {{ . }}</p>{{ end }}
+      {{- with .bullets }}
+      <ul class="job-bullets">
+        {{- range . }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </article>
+    {{- end }}
+  </section>
+
+  <aside class="resume-side">
+    <section aria-labelledby="skills">
+      <h2 id="skills" class="label">Skills</h2>
+      <dl class="skills">
+        {{- range $resume.skills }}
+        <div>
+          <dt>{{ .group }}</dt>
+          <dd>{{ .items }}</dd>
+        </div>
+        {{- end }}
+      </dl>
+    </section>
+    {{- with $resume.education }}
+    <section aria-labelledby="education">
+      <h2 id="education" class="label">Education</h2>
+      <p><span class="strong">{{ .school }}</span><br><span class="soft">{{ .degree }}</span></p>
+    </section>
+    {{- end }}
+    <section aria-labelledby="awards">
+      <h2 id="awards" class="label">Awards and languages</h2>
+      <p>{{ delimit $resume.awards "<br>" | safeHTML }}<br><span class="soft">{{ $resume.languages }}</span></p>
+    </section>
+  </aside>
+</div>
+{{ end }}

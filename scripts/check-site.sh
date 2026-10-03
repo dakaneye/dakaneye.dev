@@ -49,4 +49,12 @@ assert_contains writing/quarkus-vs-spring/index.html 'class=prose'
 assert_contains index.xml 'Quarkus vs. Spring Boot'
 assert_contains 404.html 'cd ~'
 
+# Resume and contact redirect; no personal contact details anywhere
+for text in 'cat resume.md' 'Download PDF' 'Keycloak'; do
+  assert_contains resume/index.html "$text"
+done
+assert_contains contact/index.html 'http-equiv=refresh'
+assert_absent_everywhere 'Kunkle'
+assert_absent_everywhere '(805)'
+
 echo "PASS: site checks"
