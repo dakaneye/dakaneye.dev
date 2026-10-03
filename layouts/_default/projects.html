@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section>
+  {{ partial "prompt.html" "ls projects/" }}
+  <h1 class="page-title">{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
+</section>
+
+<ul class="cards">
+  {{- range site.Data.projects.featured }}
+  {{ partial "project-card.html" . }}
+  {{- end }}
+</ul>
+
+<section class="section" aria-labelledby="contributions">
+  {{ partial "prompt.html" "git log --author=dakaneye anchore/" }}
+  <h2 id="contributions" class="section-title">Contributions</h2>
+  <p class="soft">Earlier work on open source security tooling at Anchore.</p>
+  <ul class="rows">
+    {{- range site.Data.projects.contributions }}
+    {{ partial "contribution-row.html" . }}
+    {{- end }}
+  </ul>
+</section>
+{{ end }}

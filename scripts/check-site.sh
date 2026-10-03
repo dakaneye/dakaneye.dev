@@ -37,4 +37,9 @@ for text in 'I build software that leaves the building.' 'ls shipped/' 'cat lead
   assert_contains index.html "$text"
 done
 
+# Projects
+for text in 'ls projects/' 'claude-sandbox' 'anchore/syft'; do
+  assert_contains projects/index.html "$text"
+done
+
 echo "PASS: site checks"

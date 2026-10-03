@@ -348,6 +348,93 @@ a:focus-visible {
   color: var(--soft);
 }
 
+/* Inner pages */
+
+.page-title {
+  margin: 16px 0 0;
+  font-size: clamp(32px, 4.4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.page-intro {
+  margin-top: 16px;
+  color: var(--soft);
+}
+
+.page-intro p {
+  margin: 0;
+}
+
+.cards {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  padding: 24px;
+  background: var(--surface);
+  border-radius: 4px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-header .tag {
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.card p {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.rows {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.row-name {
+  flex: 0 0 200px;
+  font-weight: 700;
+}
+
+.row-desc {
+  flex: 1 1 320px;
+}
+
+.row .tag {
+  flex: 0 0 auto;
+  padding: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

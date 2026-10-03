@@ -1,6 +1,5 @@
-<div class="contribution-row">
-  <span class="contribution-row-desc">
-    <a href="{{ .repo }}">{{ .name }}</a> — {{ .description }}
-  </span>
-  <span class="contribution-row-lang">{{ .language }}</span>
-</div>
+<li class="row">
+  <a class="row-name" href="{{ .repo }}">{{ .name }} ↗</a>
+  <span class="row-desc soft">{{ .description }}</span>
+  <span class="tag">{{ .language }}</span>
+</li>
