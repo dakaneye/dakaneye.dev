@@ -2,9 +2,9 @@
 title: "About"
 ---
 
-Right now I'm at Chainguard, working on supply chain security. I rebuild open source packages from source with SLSA 3 provenance so enterprises can actually trust what they ship. That means building the JavaScript and Java ecosystem rebuilders — 500k+ artifacts across 44+ enterprise customers.
+Most of my career has been software that leaves the building. It runs in a customer's data center, a defense agency's cluster, or an enterprise build pipeline, somewhere I can't log in and fix it. So it has to install cleanly, upgrade in place, and prove it is what it says it is.
 
-Before that, a decade of distributed systems. I designed a 100 Gbps network data ingestion pipeline at MixMode. Built the Kubernetes inventory system at Anchore that cut container analysis time by 60%. Architected a Kafka and Quarkus data pipeline at LogicMonitor pushing 2M+ monitoring metrics daily.
+Right now I'm a Staff Software Engineer and Tech Lead for on-prem delivery at NetBox Labs. Before that, I spent two years at Chainguard building the rebuilders that give 500k+ open source artifacts SLSA 3 provenance. Earlier, I was Director of Engineering at MixMode, where a Helm chart and release process helped land a $20M defense contract. Before that, I built container analysis at Anchore and data pipelines at LogicMonitor. I've switched between building and leading along the way, and I keep going back to the code.
 
 I care most about the work between the work — the tooling, the automation, the systems that make other systems reliable. If something can be verified, it should be. If something can be automated, it probably should be too.
 

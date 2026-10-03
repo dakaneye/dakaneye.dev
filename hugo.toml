@@ -62,11 +62,11 @@ paginate = 10
 [params]
   env = 'production'
   title = 'Sam Dacanay'
-  description = 'Staff Software Engineer. Distributed systems, Kubernetes, supply chain security.'
+  description = 'Staff Software Engineer, Tech Lead for on-prem delivery. Distributed systems, Kubernetes, supply chain security.'
   author = 'Sam Dacanay'
 
   # SEO
-  keywords = ['software engineer', 'distributed systems', 'kubernetes', 'supply chain security', 'go', 'java']
+  keywords = ['software engineer', 'distributed systems', 'kubernetes', 'supply chain security', 'on-prem', 'go', 'java']
 
   # Theme settings
   defaultTheme = 'auto'
@@ -84,7 +84,7 @@ paginate = 10
   [params.homeInfoParams]
     Title = 'Sam Dacanay'
     Content = '''
-Staff software engineer. I build infrastructure and make sure software is what it says it is.
+Staff software engineer and tech lead for on-prem delivery. I build infrastructure and make sure software is what it says it is.
 '''
 
   # Social icons

@@ -1,6 +1,6 @@
 ---
 title: "Resume"
-description: "Sam Dacanay - Staff Software Engineer"
+description: "Sam Dacanay - Staff Software Engineer, Tech Lead for on-prem delivery"
 ---
 
 <a href="/resume.pdf" download style="display: inline-block; margin-bottom: 1rem; padding: 0.5rem 1rem; background: var(--primary); color: var(--theme); text-decoration: none; border-radius: 4px;">Download PDF</a>
