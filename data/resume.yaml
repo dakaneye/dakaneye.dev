@@ -63,7 +63,7 @@ jobs:
         in Kubernetes to sustain 100 Gb/s, and hired and led the senior Scala
         team that built it.
       - >-
-        Built the Helm chart and release process for the legacy product,
+        Built the Helm chart and release process for MixMode Next, the v2 product,
         culminating in a $20M contract with a major government defense agency.
 
   - company: Anchore
