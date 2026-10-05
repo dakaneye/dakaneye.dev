@@ -1,7 +1,7 @@
 ---
 title: "Shipping Software You Can't Log In to Fix"
-date: 2026-10-04
-draft: true
+date: 2026-10-05
+draft: false
 description: "Decisions from six years of software running in customers' own data centers, and what each one taught me about assumptions."
 tags: ["on-prem", "kubernetes", "release engineering"]
 ---

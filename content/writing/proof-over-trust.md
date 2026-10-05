@@ -1,7 +1,7 @@
 ---
 title: "Proof Over Trust: How Rebuilt Packages, SLSA 3, and Cosign Fit Together"
-date: 2026-10-04
-draft: true
+date: 2026-10-05
+draft: false
 description: "What rebuilding 500k+ open source artifacts from source at Chainguard taught me about SLSA 3 provenance, cosign, and why 'nearly reproducible' still needs proof."
 tags: ["supply chain security", "slsa", "sigstore", "cosign"]
 ---

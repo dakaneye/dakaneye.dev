@@ -1,7 +1,7 @@
 ---
 title: "My Approach to Engineering With AI Agents"
-date: 2026-10-04
-draft: true
+date: 2026-10-05
+draft: false
 description: "How I use AI agents every day, from specs to tickets to PRs, what happened when two teams adopted them, and why our release process splits work between machines, agents, and people."
 tags: ["ai", "claude code", "release engineering", "engineering leadership"]
 ---
